@@ -1,18 +1,31 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'framer-motion';
 import { ArrowRight, Smartphone, Sparkles, Code, Play } from 'lucide-react';
 
 function PartnerCard({ partner }: { partner: any }) {
-  const [isHovered, setIsHovered] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { margin: "-20% 0px -20% 0px" });
+  const [isDesktopHovered, setIsDesktopHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const isHovered = isMobile ? isInView : isDesktopHovered;
 
   return (
     <div
-      className="group relative bg-[#0A0B10] border border-white/10 hover:border-white/20 rounded-[2.5rem] overflow-hidden transition-all duration-700 cursor-pointer w-full aspect-[9/16] shadow-2xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:-translate-y-2"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      ref={ref}
+      className="group relative bg-[#0A0B10] border border-white/10 hover:border-white/20 rounded-[2.5rem] overflow-hidden transition-all duration-700 cursor-pointer w-full aspect-[9/16] shadow-2xl hover:shadow-[0_8px_30px_rgb(0,0,0,0.4)] hover:-translate-y-2 md:hover:-translate-y-2 translate-y-0"
+      onMouseEnter={() => !isMobile && setIsDesktopHovered(true)}
+      onMouseLeave={() => !isMobile && setIsDesktopHovered(false)}
       onClick={() => window.open(`https://instagram.com/${partner.user.replace('@', '')}`, '_blank')}
     >
       {/* Base Image Container for framing/cropping */}

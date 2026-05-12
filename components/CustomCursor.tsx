@@ -51,7 +51,7 @@ export default function CustomCursor() {
   if (!isMounted) return null;
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden">
+    <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden hidden md:block">
       {/* Large Blue Tint Circle */}
       <motion.div
         className="absolute top-0 left-0 w-16 h-16 bg-sky-400/30 mix-blend-screen shadow-[0_0_20px_rgba(56,189,248,0.2)] pointer-events-none rounded-full flex items-center justify-center transform-gpu"

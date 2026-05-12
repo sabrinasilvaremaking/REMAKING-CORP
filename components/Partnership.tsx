@@ -163,34 +163,36 @@ export default function Partnership() {
                 Somos movidos pela verdadeira sinergia de um grupo estruturado e coeso. Esta forte união confere a cada empresa da nossa operação o acesso a tecnologias de ponta, metodologias validadas e uma visão global inigualável.
               </p>
 
-              <motion.img 
-                ref={logoRef}
-                src="https://i.imgur.com/GNRzwtE.png" 
-                alt="Ecosystem Logos" 
-                className="mx-auto w-full max-w-4xl object-contain mix-blend-screen opacity-90 drop-shadow-[0_0_20px_rgba(0,168,232,0.3)] cursor-pointer"
-                whileHover={!isMobile ? { 
-                  scale: 1.03, 
-                  y: -8,
-                  filter: "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)" 
-                } : {}}
-                animate={isMobile && isLogoInView ? {
-                  scale: [1, 1.03, 1],
-                  y: [0, -8, 0],
-                  filter: [
-                    "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)",
-                    "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)",
-                    "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)"
-                  ]
-                } : {}}
-                transition={{ 
-                  type: isMobile ? "tween" : "spring", 
-                  stiffness: 300, 
-                  damping: 15,
-                  duration: isMobile ? 3 : undefined,
-                  repeat: isMobile ? Infinity : 0,
-                  repeatType: "mirror"
-                }}
-              />
+              <div className="w-[calc(100%+3rem)] -ml-[1.5rem] sm:w-full sm:ml-0 md:w-full md:ml-0">
+                <motion.img 
+                  ref={logoRef}
+                  src="https://i.imgur.com/kTXfL5N.png" 
+                  alt="Ecosystem Logos" 
+                  className="mx-auto w-full max-w-4xl object-contain mix-blend-screen opacity-90 drop-shadow-[0_0_20px_rgba(0,168,232,0.3)] cursor-pointer px-2 sm:px-0"
+                  whileHover={!isMobile ? { 
+                    scale: 1.03, 
+                    y: -8,
+                    filter: "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)" 
+                  } : {}}
+                  animate={isMobile && isLogoInView ? {
+                    scale: [1, 1.03, 1],
+                    y: [0, -8, 0],
+                    filter: [
+                      "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)",
+                      "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)",
+                      "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)"
+                    ]
+                  } : {}}
+                  transition={{ 
+                    type: isMobile ? "tween" : "spring", 
+                    stiffness: 300, 
+                    damping: 15,
+                    duration: isMobile ? 3 : undefined,
+                    repeat: isMobile ? Infinity : 0,
+                    repeatType: "mirror"
+                  }}
+                />
+              </div>
             </motion.div>
           </div>
         </div>

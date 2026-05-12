@@ -111,13 +111,13 @@ export default function Partnership() {
       
       {/* Ecosystem Section with Ria de Aveiro background */}
       <div className="relative py-24 md:py-32 overflow-hidden bg-slate-950">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-slate-950">
           <img 
             src="https://i.imgur.com/iYC1g2I.jpeg" 
             alt="Ria de Aveiro" 
-            className="w-full h-full object-cover blur-[12px] scale-110 opacity-30"
+            className="w-full h-full object-cover opacity-20 transform-gpu"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/50 via-slate-950/80 to-slate-950/95" />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/60 via-slate-950/80 to-slate-950/95" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">

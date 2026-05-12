@@ -68,8 +68,9 @@ export default function InteractiveParticles({ theme = 'light' }: InteractivePar
         ctx.fill();
         
         // Add a blur/glow effect
-        ctx.shadowBlur = 15;
-        ctx.shadowColor = this.color;
+        // Removed expensive shadowBlur for performance improvement
+        // ctx.shadowBlur = 15;
+        // ctx.shadowColor = this.color;
       }
 
       update() {
@@ -111,7 +112,7 @@ export default function InteractiveParticles({ theme = 'light' }: InteractivePar
 
     const initParticles = () => {
       particles = [];
-      const numberOfParticles = (canvas.width * canvas.height) / 8000;
+      const numberOfParticles = Math.min((canvas.width * canvas.height) / 25000, 80); // reduced particle count and added max limit
       for (let i = 0; i < numberOfParticles; i++) {
         let x = Math.random() * canvas.width;
         let y = Math.random() * canvas.height;

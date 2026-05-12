@@ -54,14 +54,14 @@ export default function CustomCursor() {
     <div className="pointer-events-none fixed inset-0 z-[10000] overflow-hidden">
       {/* Large Blue Tint Circle */}
       <motion.div
-        className="absolute top-0 left-0 w-16 h-16 bg-sky-400/40 backdrop-invert backdrop-saturate-150 shadow-[0_0_20px_rgba(56,189,248,0.2)] pointer-events-none rounded-full flex items-center justify-center"
+        className="absolute top-0 left-0 w-16 h-16 bg-sky-400/30 mix-blend-screen shadow-[0_0_20px_rgba(56,189,248,0.2)] pointer-events-none rounded-full flex items-center justify-center transform-gpu"
         animate={{
           x: mousePosition.x - 32, // 64 / 2 = 32
           y: mousePosition.y - 32,
           scale: isHovering ? 1.2 : 1,
           opacity: isVisible ? 1 : 0
         }}
-        transition={{ type: 'spring', stiffness: 150, damping: 15, mass: 0.6 }}
+        transition={{ type: 'spring', stiffness: 200, damping: 20, mass: 0.5 }}
       >
         <motion.div 
           className="w-2 h-2 bg-sky-300 rounded-full shadow-[0_0_10px_rgba(125,211,252,0.8)]"

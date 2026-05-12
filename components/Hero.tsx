@@ -17,9 +17,9 @@ export default function Hero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] opacity-40 pointer-events-none"></div>
       
       {/* Background Orbs */}
-      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[120px] mix-blend-multiply animate-blob" />
-      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gray-200/50 rounded-full blur-[120px] mix-blend-multiply animate-blob animation-delay-2000" />
-      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-zinc-200/40 rounded-full blur-[120px] mix-blend-multiply animate-blob animation-delay-4000" />
+      <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-slate-200/50 rounded-full blur-[80px] animate-blob transform-gpu will-change-transform" />
+      <div className="absolute top-1/3 right-1/4 w-[500px] h-[500px] bg-gray-200/50 rounded-full blur-[80px] animate-blob animation-delay-2000 transform-gpu will-change-transform" />
+      <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-zinc-200/40 rounded-full blur-[80px] animate-blob animation-delay-4000 transform-gpu will-change-transform" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center">
         <motion.div

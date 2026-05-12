@@ -27,7 +27,7 @@ export default function Marquee() {
       <motion.div
         animate={{ x: [0, -1035] }}
         transition={{ repeat: Infinity, ease: "linear", duration: 25 }}
-        className="flex whitespace-nowrap"
+        className="flex whitespace-nowrap transform-gpu will-change-transform"
       >
         {[...words, ...words, ...words].map((word, i) => (
           <span 

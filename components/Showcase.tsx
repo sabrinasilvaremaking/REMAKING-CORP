@@ -67,7 +67,7 @@ export default function Showcase() {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="object-cover w-full h-full mix-blend-overlay opacity-80 group-hover:opacity-100 group-hover:scale-105 group-hover:mix-blend-normal transition-all duration-700 ease-[0.16,1,0.3,1]"
+                  className="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-[0.16,1,0.3,1] transform-gpu will-change-transform"
                   referrerPolicy="no-referrer"
                 />
                 

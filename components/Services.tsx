@@ -90,7 +90,7 @@ export default function Services() {
               className="group relative p-8 md:p-10 rounded-3xl bg-white/[0.03] border border-white/10 hover:bg-white/[0.06] hover:border-white/20 hover:-translate-y-2 transition-all duration-500 overflow-hidden cursor-pointer"
             >
               <div
-                className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.color} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -mr-10 -mt-10 mix-blend-screen pointer-events-none`}
+                className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-br ${service.color} rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 -mr-10 -mt-10 mix-blend-screen pointer-events-none transform-gpu`}
               />
               
               <div className="relative z-10 flex flex-col h-full">

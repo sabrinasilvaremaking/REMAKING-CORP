@@ -21,7 +21,7 @@ export default function Footer() {
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] h-[220px] border-[0.5px] border-purple-500/20 rounded-full pointer-events-none" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] border-[0.5px] border-purple-500/40 rounded-full animate-[spin_12s_linear_infinite] pointer-events-none">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[240px] h-[240px] border-[0.5px] border-purple-500/40 rounded-full animate-[spin_12s_linear_infinite] pointer-events-none transform-gpu will-change-transform">
              <div className="absolute top-0 left-1/2 w-2.5 h-2.5 bg-purple-400 rounded-full shadow-[0_0_12px_rgba(168,85,247,1)] -translate-x-1/2 -translate-y-1/2" />
           </div>
           

@@ -13,7 +13,7 @@ export default function Contact() {
       {/* Interactive Particles using dark theme (light particles) */}
       <InteractiveParticles theme="dark" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-slate-800/50 rounded-full blur-[150px] mix-blend-screen opacity-30 pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-slate-800/40 rounded-full blur-[80px] opacity-40 pointer-events-none transform-gpu will-change-transform" />
       <div className="max-w-5xl mx-auto px-6 md:px-12 relative z-10 flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

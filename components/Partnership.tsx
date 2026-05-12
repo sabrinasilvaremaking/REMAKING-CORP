@@ -119,6 +119,17 @@ function PartnerCard({ partner }: { partner: any }) {
 }
 
 export default function Partnership() {
+  const [isMobile, setIsMobile] = useState(false);
+  const logoRef = useRef<HTMLImageElement>(null);
+  const isLogoInView = useInView(logoRef, { margin: "-20% 0px -20% 0px" });
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   return (
     <section id="partnership" className="relative bg-white text-slate-900">
       
@@ -153,18 +164,31 @@ export default function Partnership() {
               </p>
 
               <motion.img 
+                ref={logoRef}
                 src="https://i.imgur.com/GNRzwtE.png" 
                 alt="Ecosystem Logos" 
                 className="mx-auto w-full max-w-4xl object-contain mix-blend-screen opacity-90 drop-shadow-[0_0_20px_rgba(0,168,232,0.3)] cursor-pointer"
-                whileHover={{ 
+                whileHover={!isMobile ? { 
                   scale: 1.03, 
                   y: -8,
                   filter: "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)" 
-                }}
+                } : {}}
+                animate={isMobile && isLogoInView ? {
+                  scale: [1, 1.03, 1],
+                  y: [0, -8, 0],
+                  filter: [
+                    "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)",
+                    "drop-shadow(0 0 40px rgba(0,168,232,0.6)) grayscale(0%)",
+                    "drop-shadow(0 0 20px rgba(0,168,232,0.3)) grayscale(0%)"
+                  ]
+                } : {}}
                 transition={{ 
-                  type: "spring", 
+                  type: isMobile ? "tween" : "spring", 
                   stiffness: 300, 
-                  damping: 15
+                  damping: 15,
+                  duration: isMobile ? 3 : undefined,
+                  repeat: isMobile ? Infinity : 0,
+                  repeatType: "mirror"
                 }}
               />
             </motion.div>

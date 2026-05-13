@@ -212,9 +212,9 @@ export default function Partnership() {
             transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           >
             <div className="flex flex-col items-center text-center justify-center mb-12">
-              <h3 className="text-3xl md:text-4xl font-display font-bold text-[#015C81] mb-4">Empresas do Grupo</h3>
+              <h3 className="text-3xl md:text-4xl font-display font-bold text-[#015C81] mb-4">CLIENTES</h3>
               <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-                Conheça as subsidiárias que integram a nossa holding,<br className="hidden md:block" /> unidas pela forte estrutura corporativa e total confiança operacional.
+                Conheça as empresas e parceiros que confiam no nosso ecossistema,<br className="hidden md:block" /> a construir em conjunto histórias de sucesso e inovação tecnológica.
               </p>
             </div>
             

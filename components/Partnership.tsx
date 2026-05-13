@@ -137,7 +137,7 @@ export default function Partnership() {
       <div className="relative py-24 md:py-32 overflow-hidden bg-slate-950">
         <div className="absolute inset-0 z-0 bg-slate-950">
           <img 
-            src="https://i.imgur.com/iYC1g2I.jpeg" 
+            src="https://i.imgur.com/pPOw48Y.jpeg" 
             alt="Ria de Aveiro" 
             className="w-full h-full object-cover opacity-20 transform-gpu"
           />
